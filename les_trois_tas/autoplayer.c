@@ -5,7 +5,7 @@
 int autoplayer(int* old_tas){
 
 	int result=one_solution(old_tas);
-	if(result=0){
+	if(result==0){
 		if(old_tas[0]!=0) {
 			old_tas[0]=old_tas[0]-1;
 			return 2;
@@ -57,7 +57,7 @@ one_solution(,itr);
 	else{
 		return itr;			
 }*/
-
+	return 0;
 }
 
 
@@ -76,7 +76,9 @@ int test_gager(int x, int y, int z){
 
 	if(tas[0]==1&&tas[1]==1&&tas[2]==1) return 1;
 
-	if(tas[0]==tas[1]&&tas[2]==0) return 1;
+	if(tas[0]==tas[1]&&tas[0]!=1&&tas[2]==0) return 1;
+	
+	if(tas[0]==1&&tas[1]==0&&tas[2]==0) return 1;
 
 	return 0;
 }

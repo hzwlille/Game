@@ -55,6 +55,10 @@ void main (void)
 		autoplayer(autotas);
 		x=autotas[0]; y=autotas[1]; z=autotas[2];
 		printtas(x,y,z);
+		if(x+y+z==1){
+			fin=0;
+			player=2;
+		}
 
 	}
 
