@@ -1,21 +1,47 @@
 
 #include <stdio.h>
+//Déclaration des fonctions
+
+
 void printtas(int , int , int );
 int player_program(int*, int*,int*,  int, int);
+
+//Déclaration des proccessus
+play_people(void);
+
 
 void main (void)
 {
 
-	printf ("Bienvenu au jeu des trois tas !\n");
-	printf ("Ci d'après les trois tas inithiales:\n");
+	printf("Bienvenu au jeu des trois tas !\n");
+	printf("Ci d'après les trois tas initiaux:\n");
 	int x=3,y=5,z=7;
 	printtas(x,y,z);
 	int fin=1;
 	int tas;
 	int number;
-
+	int mode;
 
 	int player;
+
+	printf("Veuillez choisir le mode: \n 1: Jouer en local avec entre humain \n 2: Jouer avec l'ordinateur \n 3: Jouer à en ligne\n");
+
+
+	scanf("%d",&mode);
+
+	switch(mode){
+		case 1: 
+			printf("1"); 
+			break;
+		case 2:
+			printf("2"); 
+			break;
+		case 3: 
+			printf("3"); 
+			break;
+	}
+
+
 	while(fin==1){
 		printf("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
 		player=1;
@@ -24,6 +50,13 @@ void main (void)
 		player=2;
 		fin=player_program(&x,&y,&z,  number, player);
 	}
+
+
+
+
+
+
+
 	printf ("Le joueur %d a gagné, merci d'avoir joué à ce jeux\n\n",player);
 
 }
@@ -99,7 +132,16 @@ int player_program(int* x, int* y,int* z,  int number,int num){
 	return 1;
 
 }
+//Les processus du programe
+
+//Jouer avec lui même
+play_people(void){
+	printf("Let's try%d", x);
+
+}
 
 
+//Jouer avec l'ordinateur
+//Jouer en ligne
 
 
