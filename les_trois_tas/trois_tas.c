@@ -1,5 +1,6 @@
 
 #include <stdio.h>
+#include "autoplayer.h"
 //Déclaration des fonctions
 
 
@@ -21,7 +22,8 @@ void main (void)
 	int tas;
 	int number;
 	int mode;
-
+	int autotas[3];
+	
 	int player;
 
 	printf("Veuillez choisir le mode: \n 1: Jouer en local avec entre humain \n 2: Jouer avec l'ordinateur \n 3: Jouer à en ligne\n");
@@ -47,8 +49,13 @@ void main (void)
 		player=1;
 		fin=player_program(&x,&y,&z,  number, player);
 		if(fin==0) break;
-		player=2;
-		fin=player_program(&x,&y,&z,  number, player);
+		//player=2;
+		//fin=player_program(&x,&y,&z,  number, player);
+		autotas[0]=x; autotas[1]=y; autotas[2]=z;
+		autoplayer(autotas);
+		x=autotas[0]; y=autotas[1]; z=autotas[2];
+		printtas(x,y,z);
+
 	}
 
 
@@ -135,10 +142,10 @@ int player_program(int* x, int* y,int* z,  int number,int num){
 //Les processus du programe
 
 //Jouer avec lui même
-play_people(void){
-	printf("Let's try%d", x);
+//play_people(void){
+//	printf("Let's try%d", x);
 
-}
+//}
 
 
 //Jouer avec l'ordinateur
