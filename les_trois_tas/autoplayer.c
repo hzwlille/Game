@@ -31,19 +31,19 @@ int one_solution(int* tas){
 	x=tas[0];
 	y=tas[1];
 	z=tas[2];
-	for(int i=0;i<=x;i++){
+	for(int i=1;i<=x;i++){
 		if(test_gager(x-i,y,z)==1){
 			tas[0]=tas[0]-i;
 			return 1;
 		}
 	}
-	for(int j=0;j<=y;j++){
+	for(int j=1;j<=y;j++){
 		if(test_gager(x,y-j,z)==1){
 			tas[1]=tas[1]-j;
 			return 1;
 		}
 	}
-	for(int k=0;k<=z;k++){
+	for(int k=1;k<=z;k++){
 		if(test_gager(x,y,z-k)==1){
 			tas[2]=tas[2]-k;
 			return 1;
